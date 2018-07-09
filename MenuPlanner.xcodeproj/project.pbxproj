@@ -15,6 +15,8 @@
 		EF4C176C20F3CD310026DAFD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF4C176A20F3CD310026DAFD /* LaunchScreen.storyboard */; };
 		EF4C177420F3D1520026DAFD /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4C177320F3D1520026DAFD /* WelcomeViewController.swift */; };
 		EF4C177820F3E66A0026DAFD /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4C177720F3E66A0026DAFD /* LoginViewController.swift */; };
+		EF4C177A20F3ED9C0026DAFD /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4C177920F3ED9C0026DAFD /* CalendarViewController.swift */; };
+		EF4C177C20F3F2B60026DAFD /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4C177B20F3F2B60026DAFD /* ProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		EF4C176D20F3CD310026DAFD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EF4C177320F3D1520026DAFD /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		EF4C177720F3E66A0026DAFD /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		EF4C177920F3ED9C0026DAFD /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		EF4C177B20F3F2B60026DAFD /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +68,8 @@
 				EF4C176020F3CD310026DAFD /* ViewController.swift */,
 				EF4C177320F3D1520026DAFD /* WelcomeViewController.swift */,
 				EF4C177720F3E66A0026DAFD /* LoginViewController.swift */,
+				EF4C177920F3ED9C0026DAFD /* CalendarViewController.swift */,
+				EF4C177B20F3F2B60026DAFD /* ProfileViewController.swift */,
 				EF4C176220F3CD310026DAFD /* Main.storyboard */,
 				EF4C176820F3CD310026DAFD /* Assets.xcassets */,
 				EF4C176A20F3CD310026DAFD /* LaunchScreen.storyboard */,
@@ -145,9 +151,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF4C177A20F3ED9C0026DAFD /* CalendarViewController.swift in Sources */,
 				EF4C176720F3CD310026DAFD /* MenuPlanner.xcdatamodeld in Sources */,
 				EF4C177420F3D1520026DAFD /* WelcomeViewController.swift in Sources */,
 				EF4C176120F3CD310026DAFD /* ViewController.swift in Sources */,
+				EF4C177C20F3F2B60026DAFD /* ProfileViewController.swift in Sources */,
 				EF4C177820F3E66A0026DAFD /* LoginViewController.swift in Sources */,
 				EF4C175F20F3CD310026DAFD /* AppDelegate.swift in Sources */,
 			);

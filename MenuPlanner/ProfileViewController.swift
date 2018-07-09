@@ -1,5 +1,5 @@
 //
-//  LoginViewController.swift
+//  ProfileViewController.swift
 //  MenuPlanner
 //
 //  Created by Lisa Steele on 7/9/18.
@@ -8,9 +8,7 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
-    
-    @IBOutlet var submitButton: UIButton!
+class ProfileViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,10 +19,6 @@ class LoginViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-    
-    @IBAction func submitButtonTapped(_ sender: UIButton) {
-        self.performSegue(withIdentifier: "CalendarSegue", sender: self.submitButton)
     }
     
 
