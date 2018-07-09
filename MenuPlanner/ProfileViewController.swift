@@ -9,6 +9,9 @@
 import UIKit
 
 class ProfileViewController: UIViewController {
+    
+    @IBOutlet var firstNameLabel: UILabel!
+    @IBOutlet var lastNameLabel: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
