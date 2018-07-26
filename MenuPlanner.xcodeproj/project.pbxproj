@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EF2B0251210927CD00E1C0BD /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2B0250210927CD00E1C0BD /* UserModel.swift */; };
+		EF2B02532109294300E1C0BD /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2B02522109294300E1C0BD /* HomeModel.swift */; };
 		EF4C175F20F3CD310026DAFD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4C175E20F3CD310026DAFD /* AppDelegate.swift */; };
-		EF4C176120F3CD310026DAFD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4C176020F3CD310026DAFD /* ViewController.swift */; };
 		EF4C176420F3CD310026DAFD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF4C176220F3CD310026DAFD /* Main.storyboard */; };
 		EF4C176720F3CD310026DAFD /* MenuPlanner.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EF4C176520F3CD310026DAFD /* MenuPlanner.xcdatamodeld */; };
 		EF4C176920F3CD310026DAFD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF4C176820F3CD310026DAFD /* Assets.xcassets */; };
@@ -16,13 +17,14 @@
 		EF4C177420F3D1520026DAFD /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4C177320F3D1520026DAFD /* WelcomeViewController.swift */; };
 		EF4C177820F3E66A0026DAFD /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4C177720F3E66A0026DAFD /* LoginViewController.swift */; };
 		EF4C177A20F3ED9C0026DAFD /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4C177920F3ED9C0026DAFD /* CalendarViewController.swift */; };
-		EF4C177C20F3F2B60026DAFD /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4C177B20F3F2B60026DAFD /* ProfileViewController.swift */; };
+		EF4C177C20F3F2B60026DAFD /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4C177B20F3F2B60026DAFD /* ProfileTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EF2B0250210927CD00E1C0BD /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		EF2B02522109294300E1C0BD /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
 		EF4C175B20F3CD300026DAFD /* MenuPlanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MenuPlanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF4C175E20F3CD310026DAFD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EF4C176020F3CD310026DAFD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		EF4C176320F3CD310026DAFD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EF4C176620F3CD310026DAFD /* MenuPlanner.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MenuPlanner.xcdatamodel; sourceTree = "<group>"; };
 		EF4C176820F3CD310026DAFD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -31,7 +33,7 @@
 		EF4C177320F3D1520026DAFD /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		EF4C177720F3E66A0026DAFD /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		EF4C177920F3ED9C0026DAFD /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
-		EF4C177B20F3F2B60026DAFD /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		EF4C177B20F3F2B60026DAFD /* ProfileTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,11 +67,12 @@
 			isa = PBXGroup;
 			children = (
 				EF4C175E20F3CD310026DAFD /* AppDelegate.swift */,
-				EF4C176020F3CD310026DAFD /* ViewController.swift */,
+				EF2B0250210927CD00E1C0BD /* UserModel.swift */,
+				EF2B02522109294300E1C0BD /* HomeModel.swift */,
 				EF4C177320F3D1520026DAFD /* WelcomeViewController.swift */,
 				EF4C177720F3E66A0026DAFD /* LoginViewController.swift */,
 				EF4C177920F3ED9C0026DAFD /* CalendarViewController.swift */,
-				EF4C177B20F3F2B60026DAFD /* ProfileViewController.swift */,
+				EF4C177B20F3F2B60026DAFD /* ProfileTableViewController.swift */,
 				EF4C176220F3CD310026DAFD /* Main.storyboard */,
 				EF4C176820F3CD310026DAFD /* Assets.xcassets */,
 				EF4C176A20F3CD310026DAFD /* LaunchScreen.storyboard */,
@@ -152,10 +155,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF4C177A20F3ED9C0026DAFD /* CalendarViewController.swift in Sources */,
+				EF2B0251210927CD00E1C0BD /* UserModel.swift in Sources */,
 				EF4C176720F3CD310026DAFD /* MenuPlanner.xcdatamodeld in Sources */,
 				EF4C177420F3D1520026DAFD /* WelcomeViewController.swift in Sources */,
-				EF4C176120F3CD310026DAFD /* ViewController.swift in Sources */,
-				EF4C177C20F3F2B60026DAFD /* ProfileViewController.swift in Sources */,
+				EF2B02532109294300E1C0BD /* HomeModel.swift in Sources */,
+				EF4C177C20F3F2B60026DAFD /* ProfileTableViewController.swift in Sources */,
 				EF4C177820F3E66A0026DAFD /* LoginViewController.swift in Sources */,
 				EF4C175F20F3CD310026DAFD /* AppDelegate.swift in Sources */,
 			);
