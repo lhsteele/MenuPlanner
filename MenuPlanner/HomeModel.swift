@@ -17,9 +17,7 @@ class HomeModel: NSObject, URLSessionDataDelegate {
     
     var data = Data()
     
-    //I think the urlPath is where the db lives?
-    //but the tutorial also says this is the PHP service
-    let urlPath: String = "UPDATE THIS!!!!!!"
+    let urlPath: String = "http://ec2-13-59-87-126.us-east-2.compute.amazonaws.com/"
     
     func downloadItems() {
         let url: URL = URL(string: urlPath)!
