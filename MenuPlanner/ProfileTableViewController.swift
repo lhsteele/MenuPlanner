@@ -24,7 +24,7 @@ class ProfileTableViewController: UIViewController, UITableViewDataSource, UITab
         
         let homeModel = HomeModel()
         homeModel.delegate = self
-        homeModel.downloadItems()
+        //homeModel.downloadItems()
     }
     
     func itemsDownloaded(items: NSArray) {

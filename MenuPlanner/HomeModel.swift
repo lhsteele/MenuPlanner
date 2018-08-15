@@ -9,7 +9,7 @@
 import UIKit
 
 protocol HomeModelProtocol: class {
-    func itemsDownloaded(items: NSArray)
+    //func itemsDownloaded(items: NSArray)
 }
 
 class HomeModel: NSObject, URLSessionDataDelegate {
@@ -37,7 +37,7 @@ class HomeModel: NSObject, URLSessionDataDelegate {
     
     func parseJSON(_ data: Data) {
         var jsonResult = NSArray()
-        
+        print (jsonResult)
         do {
             jsonResult = try JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.allowFragments) as! NSArray
         } catch let error as NSError {
@@ -65,13 +65,15 @@ class HomeModel: NSObject, URLSessionDataDelegate {
                 user.lName = lName
                 //user.userTypeID = userTypeID
                 //user.hasAllergy = hasAllergy
+                print (fName)
+                print (lName)
             }
             
-            users.add(user)
+            //users.add(user)
         }
         
         DispatchQueue.main.async(execute: { () -> Void in
-            self.delegate.itemsDownloaded(items: users)
+            //self.delegate.itemsDownloaded(items: users)
         })
     }
 }

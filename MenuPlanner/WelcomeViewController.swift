@@ -16,6 +16,9 @@ class WelcomeViewController: UIViewController {
         super.viewDidLoad()
         
         self.navigationController?.setNavigationBarHidden(true, animated: true)
+        
+        let homeModel = HomeModel()
+        homeModel.downloadItems()
     }
 
     override func didReceiveMemoryWarning() {
