@@ -38,6 +38,8 @@ class HomeModel: NSObject, URLSessionDataDelegate {
     func parseJSON(_ data: Data) {
         var jsonResult = NSArray()
         print (jsonResult)
+        //The server seems to be returning a JSON object already
+        //the error that line 44 gives suggests there is no need to parse JSON twice, i.e. lines 49-75
         do {
             jsonResult = try JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.allowFragments) as! NSArray
         } catch let error as NSError {
