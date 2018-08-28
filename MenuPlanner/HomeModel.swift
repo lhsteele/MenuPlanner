@@ -25,11 +25,48 @@ class HomeModel: NSObject, URLSessionDataDelegate {
         
         let task = defaultSession.dataTask(with: url) {
             (data, response, error)  in
+            guard error == nil else {
+                print (error!)
+                return
+            }
+            guard let responseData = data else {
+                print ("Error: did not receive data")
+                return
+            }
+            guard let jsonData = String(data: responseData, encoding: String.Encoding.utf8) else {
+                print ("error")
+                return
+            }
+            print (data)
+            
+            do {
+                let json = try JSONSerialization.jsonObject(with: data!, options: [JSONSerialization.ReadingOptions.allowFragments])
+                
+                guard let parseJSON = json as? [String: Any]
+                    else {
+                        print ("error while parsing")
+                        return
+                }
+            } catch {
+                print (error)
+            }
+        }
+        task.resume()
+    }
+    
+    /*
+    func downloadItems() {
+        let url: URL = URL(string: urlPath)!
+        let defaultSession = Foundation.URLSession(configuration: URLSessionConfiguration.default)
+        
+        let task = defaultSession.dataTask(with: url) {
+            (data, response, error)  in
             if error != nil {
                 print ("Failed to download data")
             } else {
                 print ("Data downloaded")
-                self.parseJSON(data!)
+                print (data)
+                //self.parseJSON(data!)
             }
         }
         task.resume()
@@ -78,4 +115,5 @@ class HomeModel: NSObject, URLSessionDataDelegate {
             //self.delegate.itemsDownloaded(items: users)
         })
     }
+    */
 }
