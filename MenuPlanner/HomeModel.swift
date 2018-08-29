@@ -9,7 +9,7 @@
 import UIKit
 
 protocol HomeModelProtocol: class {
-    //func itemsDownloaded(items: NSArray)
+    func itemsDownloaded(items: NSArray)
 }
 
 class HomeModel: NSObject, URLSessionDataDelegate {
@@ -18,7 +18,7 @@ class HomeModel: NSObject, URLSessionDataDelegate {
     var data = Data()
     
     let urlPath: String = "http://ec2-13-59-87-126.us-east-2.compute.amazonaws.com/JSONTest.php"
-    
+    /*
     func downloadItems() {
         let url: URL = URL(string: urlPath)!
         let defaultSession = Foundation.URLSession(configuration: URLSessionConfiguration.default)
@@ -48,8 +48,8 @@ class HomeModel: NSObject, URLSessionDataDelegate {
         }
         task.resume()
     }
-    
-    /*
+    */
+   
     func downloadItems() {
         let url: URL = URL(string: urlPath)!
         let defaultSession = Foundation.URLSession(configuration: URLSessionConfiguration.default)
@@ -60,8 +60,7 @@ class HomeModel: NSObject, URLSessionDataDelegate {
                 print ("Failed to download data")
             } else {
                 print ("Data downloaded")
-                print (data)
-                //self.parseJSON(data!)
+                self.parseJSON(data!)
             }
         }
         task.resume()
@@ -69,11 +68,10 @@ class HomeModel: NSObject, URLSessionDataDelegate {
     
     func parseJSON(_ data: Data) {
         var jsonResult = NSArray()
-        print (jsonResult)
-        //The server seems to be returning a JSON object already
-        //the error that line 44 gives suggests there is no need to parse JSON twice, i.e. lines 49-75
+
         do {
             jsonResult = try JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.allowFragments) as! NSArray
+            //print (jsonResult)
         } catch let error as NSError {
             print (error)
         }
@@ -83,13 +81,13 @@ class HomeModel: NSObject, URLSessionDataDelegate {
         
         for i in 0..<jsonResult.count {
             jsonElement = jsonResult[i] as! NSDictionary
-            
+            //print (jsonElement)
             let user = UserModel()
             
             if //let userID = jsonElement["UserID"] as? Int,
                 //let userName = jsonElement["UserName"] as? String,
-                let fName = jsonElement["FName"] as? String,
-                let lName = jsonElement["LName"] as? String
+                let fName = jsonElement["FirstName"] as? String,
+                let lName = jsonElement["LastName"] as? String
                 //let userTypeID = jsonElement["UserTypeID"] as? Int,
                 //let hasAllergy = jsonElement["HasAllergy"] as? Bool
             {
@@ -99,16 +97,18 @@ class HomeModel: NSObject, URLSessionDataDelegate {
                 user.lName = lName
                 //user.userTypeID = userTypeID
                 //user.hasAllergy = hasAllergy
-                print (fName)
-                print (lName)
+                //print (userID)
+                //print (fName)
+                //print (lName)
             }
-            
-            //users.add(user)
+            users.add(user)
+            print (users)
         }
         
+        
         DispatchQueue.main.async(execute: { () -> Void in
-            //self.delegate.itemsDownloaded(items: users)
+            self.delegate.itemsDownloaded(items: users)
         })
     }
-    */
+    
 }
