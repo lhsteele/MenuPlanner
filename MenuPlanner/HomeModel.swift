@@ -17,7 +17,7 @@ class HomeModel: NSObject, URLSessionDataDelegate {
     
     var data = Data()
     
-    let urlPath: String = "http://ec2-13-59-87-126.us-east-2.compute.amazonaws.com/"
+    let urlPath: String = "http://ec2-13-59-87-126.us-east-2.compute.amazonaws.com/JSONTest.php"
     
     func downloadItems() {
         let url: URL = URL(string: urlPath)!
@@ -40,13 +40,8 @@ class HomeModel: NSObject, URLSessionDataDelegate {
             print (data)
             
             do {
-                let json = try JSONSerialization.jsonObject(with: data!, options: [JSONSerialization.ReadingOptions.allowFragments])
-                
-                guard let parseJSON = json as? [String: Any]
-                    else {
-                        print ("error while parsing")
-                        return
-                }
+                let jsonResult = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.allowFragments) as! NSArray
+                print (jsonResult)
             } catch {
                 print (error)
             }
